@@ -36,21 +36,21 @@ html, body {
     margin: auto;
  }
 
- .buttonWrapper .button {
+.buttonWrapper .button {
 	font-family: 'Nunito Sans', sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-    background: transparent;
-    border: 2px solid #50f8df;
-    padding: 13px 15px;
-    text-decoration: none;
-    color: #fff;
-    display: table;
-    margin: auto;
-    line-height: 25px;
-    transition: all 0.3s;
-    outline: 0;
-    cursor: pointer;
+	font-weight: 600;
+	font-size: 20px;
+	background: transparent;
+	border: 2px solid #50f8df;
+	padding: 13px 15px;
+	text-decoration: none;
+	color: #fff;
+	display: table;
+	margin: auto;
+	line-height: 25px;
+	transition: all 0.3s;
+	outline: 0;
+	cursor: pointer;
 }
 
 .buttonWrapper .button:hover {
@@ -62,6 +62,20 @@ html, body {
 
 .buttonWrapper p {
 	margin: 10px 0;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #50f8df;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .container {
@@ -149,10 +163,10 @@ html, body {
 .contentSection .personBox_wrapper {
 	margin: 60px auto;
 	display: table;
+	text-align: center;
 }
 
 .contentSection .personBox_grid {
-	width: 30.6%;
     display: inline-block;
     margin-right: 40px;
     margin-bottom: 40px;
@@ -223,6 +237,7 @@ html, body {
 
 .contentSection .personBox_grid .personBox .personContent .personDetails {
 	margin-top: 28px;
+	text-align: left;
 }
 
 .contentSection .personBox_grid .personBox .personContent .personDetails p {
@@ -303,92 +318,7 @@ html, body {
 	text-decoration: underline;
 }
 
-/** MOBILE RESPONSIVE **/
-
-@media (max-width: 1400px) {
-	.headerSection {
-		height: 100vh;
-		display: table;
-		position: relative;
-	}
-
-	.headerSection .headerWrapper {
-		display: table-cell;
-		vertical-align: middle;
-	}
-
-	.headerSection .logo {
-		position: absolute;
-		top: 0;
-		width: 100%
-	}
-
-	.headerSection .headerContent {
-		padding-top: 80px;
-	}
-}
-
-@media (max-width: 1204px) {
-
-	.headerSection .headerColumn_1 h2.title {
-		font-size: 42px;
-		line-height: 57px;
-	}
-
-	.headerSection .headerColumn_1 p.subtitle {
-		font-size: 22px;
-	}
-}
-
-@media (max-width: 1204px) {
-
-	.container {
-		width: 85%
-	}
-
-	.headerSection .logo a {
-		margin: 50px auto;
-	}
-
-	.headerSection .headerContent {
-		padding-top: 0;
-		text-align: center;
-	}
-
-	.headerSection .headerColumn_1, .headerSection .headerColumn_2 {
-		display: block;
-		width: 100%;
-	}
-
-	.headerSection .headerColumn_1 {
-		margin-bottom: 70px;
-	}
-
-}
-
-@media (min-width: 768px) and (max-width: 1204px) {
-
-	.contentSection .personBox_grid {
-		width: 29.2%;
-	}
-
-}
-
-@media (max-width: 767px) {
-
-	.contentSection .personBox_grid {
-		width: 100%;
-	}
-
-	.contentSection .personBox_grid .personBox .personContent .personDetails {
-		text-align: center;
-	}
-
-}
-
-
-
-/* The Modal (background) */
+/** MODAL **/
 .modalPopup {
     display: none; 
     position: fixed;
@@ -480,21 +410,6 @@ html, body {
 	margin-top: 50px;
 }
 
-/* The Close Button */
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #50f8df;
-    text-decoration: none;
-    cursor: pointer;
-}
-
 /* Add Zoom Animation */
 .animate {
     -webkit-animation: animatezoom 0.6s;
@@ -509,4 +424,89 @@ html, body {
 @keyframes animatezoom {
     from {transform: scale(0)} 
     to {transform: scale(1)}
+}
+
+/** MOBILE RESPONSIVE **/
+
+@media (max-width: 1400px) {
+	.headerSection {
+		height: 100vh;
+		display: table;
+		position: relative;
+	}
+
+	.headerSection .headerWrapper {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.headerSection .logo {
+		position: absolute;
+		top: 0;
+		width: 100%
+	}
+
+	.headerSection .headerContent {
+		padding-top: 80px;
+	}
+}
+
+@media (max-width: 1204px) {
+
+	.headerSection .headerColumn_1 h2.title {
+		font-size: 42px;
+		line-height: 57px;
+	}
+
+	.headerSection .headerColumn_1 p.subtitle {
+		font-size: 22px;
+	}
+}
+
+@media (max-width: 1204px) {
+
+	.container {
+		width: 85%
+	}
+
+	.headerSection .logo a {
+		margin: 50px auto;
+	}
+
+	.headerSection .headerContent {
+		padding-top: 0;
+		text-align: center;
+	}
+
+	.headerSection .headerColumn_1, .headerSection .headerColumn_2 {
+		display: block;
+		width: 100%;
+	}
+
+	.headerSection .headerColumn_1 {
+		margin-bottom: 70px;
+	}
+
+}
+
+@media (max-width: 880px) {
+	.contentSection .personBox_grid {
+		margin-left: 40px;
+	}
+	.contentSection .personBox_grid:last-child {
+		margin-right: 40px;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.contentSection .personBox_grid .personBox .personContent .personDetails {
+		text-align: center;
+	}
+
+	.contentSection .personBox_grid {
+		margin-left: 0;
+		margin-right: 0 !important;
+	}
+
 }
