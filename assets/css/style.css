@@ -45,7 +45,6 @@ html, body {
 	padding: 13px 15px;
 	text-decoration: none;
 	color: #fff;
-	display: table;
 	margin: auto;
 	line-height: 25px;
 	transition: all 0.3s;
@@ -114,10 +113,6 @@ html, body {
     padding-right: 5%;
 }
 
-.headerSection .headerColumn_2 {
-	padding-right: 0;
-}
-
 .headerSection .headerColumn_1 span {
 	font-family: 'Nunito Sans', sans-serif;
  	font-weight: 600;
@@ -142,6 +137,15 @@ html, body {
  	font-size: 26px;
  	text-transform: uppercase;
 }
+
+.headerSection .headerColumn_2 {
+	padding-right: 0;
+}
+
+.headerSection .headerColumn_2 .videoWrapper {
+	cursor: pointer;
+}
+
 
 /** HEADER **/
 
@@ -348,7 +352,8 @@ html, body {
  	color: #fff;
  	text-align: center;
  	text-transform: uppercase;
- 	line-height: 65px;
+ 	line-height: 30px;
+ 	margin-bottom: 50px;
 }
 
 .modalPopup .modalContent .inputWrapper {
@@ -408,6 +413,10 @@ html, body {
 
 .modalPopup .modalContent .buttonWrapper {
 	margin-top: 50px;
+}
+
+.modalPopup .modalContent .buttonWrapper .button {
+	white-space: pre-wrap;
 }
 
 /* Add Zoom Animation */
@@ -507,6 +516,18 @@ html, body {
 	.contentSection .personBox_grid {
 		margin-left: 0;
 		margin-right: 0 !important;
+	}
+
+	.modalPopup {
+		padding-top: 50px;
+	}
+
+}
+
+@media (max-width: 440px) {
+	.buttonWrapper .button:before,
+	.buttonWrapper .button:after {
+		content: none !important;
 	}
 
 }
